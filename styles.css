@@ -1,0 +1,73 @@
+body{
+    background-color: #202125;
+}
+.main-frame{
+    position: absolute;
+    width: 400px;
+    height: 620px;
+    left: 440px;
+    top: 10px;
+    padding: 5px 0;
+    background: #2F3036;
+    border-radius: 10px;
+}
+.visor{
+    box-sizing: border-box;
+    width: 400px;
+    height: 150px;
+    left: 440px;
+    top: 50px;
+    background: #43444D;
+    border-radius: 10px 10px 0px 0px;
+}
+.flex-btn{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 12px;
+}
+button{
+    padding: 0;
+    border: none;
+    width: 80px;
+    height: 80px;
+    font-size: 24px;
+    font-weight: 800;
+}
+.operation-btn{  
+    background: #43444D;
+    color: #df0848;
+   
+}
+.num-btn{
+    background: #36373F;
+    color: rgb(211, 211, 211);
+}
+.btns {
+    display: flex;
+    justify-content: center;
+    min-height: 100%;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0 12px;
+}
+.equal{
+    margin-left: -2px;
+    height: 170px;
+    background-color: #df0848;
+    color: rgb(211, 211, 211);
+}
+
+button:active{
+    background-color: gray;
+    color: rgb(47, 48, 54);
+}
+.btns button{
+    margin: 0px 6px;
+}
+.row{
+    margin-left: -2px;
+}
+.flex{
+    display: flex;
+}
