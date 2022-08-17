@@ -7,30 +7,35 @@ primDisplay.textContent = mainString;
 
 
 function operate(action, value){
+    const lastChar =  numPrim.substr(numPrim.length - 1);
     if (action === 'input'){
-        numPrim += value;
+        if (lastChar != '.') numPrim += value;
+        
     } else if (action === 'operator'){
-        const lastChar =  numPrim.substr(numPrim.length - 1);
         if(lastChar >= '0' && lastChar <= '9'){
             numSec += numPrim + value;
             mainString = numSec;
             numPrim = '';    
         }
+
     }else if (action === 'clear'){
         if (numPrim == '' || numPrim == undefined) {
             numSec = '';
             mainString = numSec;
         }
         numPrim = '';
-        numSec =  mainString.slice(0, -3); // remove operator
+        // numSec =  mainString.slice(0, -3); // remove operator
         mainString = numSec;
+
     } else if (action === 'equal') {
         mainString += numPrim;
         numPrim =  eval(mainString).toString() ;
         numSec = '';
-        mainString = numSec;    
+        mainString = numSec; 
+
     } else if (action === 'slice'){
         numPrim = numPrim.slice(0, -1);
+
     } else if (action === 'percent'){
         numPrim /= 100;
     }
