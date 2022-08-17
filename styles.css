@@ -1,17 +1,20 @@
 body{
     background-color: #202125;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .main-frame{
-    position: absolute;
     width: 400px;
     height: 620px;
-    left: 440px;
     top: 10px;
     padding: 5px 0;
     background: #2F3036;
     border-radius: 10px;
 }
-.visor{
+.display{
+    color: rgb(211, 211, 211);
+    text-align: right;
     box-sizing: border-box;
     width: 400px;
     height: 150px;
@@ -19,6 +22,23 @@ body{
     top: 50px;
     background: #43444D;
     border-radius: 10px 10px 0px 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.main-num{
+    overflow:hidden;
+    font-weight: 800;
+    font-size: 48px;
+    padding: 10px 50px 30px 30px;
+}
+.sec-num{
+    overflow:hidden;
+    font-weight: 800;
+    font-size: 32px;
+    padding: 10px 50px 0px 30px;
+    
 }
 .flex-btn{
     display: flex;

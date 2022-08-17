@@ -9,39 +9,42 @@
 </head>
 <body>
     <div class="main-frame">
-        <div class="visor"></div>
-        <div class="flex-btn">
-            <button class="operation-btn">C</button>
-            <button class="operation-btn" >%</button>
-            <button class="operation-btn">÷</button>
-            <button class="operation-btn">x</button>
+        <div class="display">
+            <div class="sec-num"></div>
+            <div class="main-num"></div>
         </div>
         <div class="flex-btn">
-            <button class="num-btn">7</button>
-            <button class="num-btn">8</button>
-            <button class="num-btn">9</button>
-            <button class="operation-btn">-</button>
+            <button onclick="operate('clear', '')" class="operation-btn">C</button>
+            <button onclick="operate('percent', '')" class="operation-btn">%</button>
+            <button onclick="operate('operator', ' / ' )" class="operation-btn">÷</button>
+            <button onclick="operate('operator', ' * ' )" class="operation-btn">x</button>
         </div>
         <div class="flex-btn">
-            <button class="num-btn">4</button>
-            <button class="num-btn">5</button>
-            <button class="num-btn">6</button>
-            <button class="operation-btn">+</button>
+            <button onclick="operate('input', '7' )" id="num7" class="num-btn">7</button>
+            <button onclick="operate('input', '8' )" id="num8" class="num-btn">8</button>
+            <button onclick="operate('input', '9' )" id="num9" class="num-btn">9</button>
+            <button onclick="operate('operator', ' - ' )" class="operation-btn">-</button>
+        </div>
+        <div class="flex-btn">
+            <button onclick="operate('input', '4' )" id="num4" class="num-btn">4</button>
+            <button onclick="operate('input', '5' )" id="num5" class="num-btn">5</button>
+            <button onclick="operate('input', '6' )" id="num6"class="num-btn">6</button>
+            <button onclick="operate('operator', ' + ' )"id="sumOp" class="operation-btn">+</button>
         </div>
         <div class="flex">
             <div class="btns">
                 <div class="row">
-                    <button class="num-btn">1</button>
-                    <button class="num-btn">2</button>
-                    <button class="num-btn">3</button>
+                    <button onclick="operate('input', '1' )"id="num1" class="num-btn">1</button>
+                    <button onclick="operate('input', '2' )" id="num2" class="num-btn">2</button>
+                    <button onclick="operate('input', '3' )" id="num3"class="num-btn">3</button>
                 </div>
                 <div class="row">
-                    <button class="num-btn">0</button>
-                    <button class="num-btn">.</button>
-                    <button class="num-btn"><</button>
+                    <button onclick="operate('input', '0' )" id="num0" class="num-btn">0</button>
+                    <button onclick="operate('input', '.' )" class="num-btn">.</button>
+                    <button onclick="operate('slice', '');" class="num-btn"><</button>
                 </div>
             </div>
-            <button class="equal"> = </button>
+            <button onclick="operate('equal', '')" class="equal"> = </button>
         </div>
 
 
